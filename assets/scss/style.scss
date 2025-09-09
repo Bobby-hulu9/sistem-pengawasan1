@@ -1,0 +1,92 @@
+/* Warna utama */
+$telkom-red:   #c00410;
+$primary-blue: #1976d2;
+$soft-blue:    #e3f2fd;
+$white:        #fff;
+$gray:         #f8f9fa;
+$shadow:       0 8px 24px rgba(33,150,243,0.10);
+
+/* Gradient background untuk body */
+body {
+  background: linear-gradient(135deg, $soft-blue 60%, $white 100%);
+  color: $telkom-red;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Link dan tombol utama */
+a, .btn-primary {
+  background-color: $telkom-red;
+  border-color: $telkom-red;
+  color: $white;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  box-shadow: $shadow;
+}
+
+a:hover, .btn-primary:hover {
+  background-color: $primary-blue;
+  border-color: $primary-blue;
+  color: $white;
+}
+
+/* Card dan shadow efek */
+.card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: $shadow;
+  transition: box-shadow 0.2s, transform 0.2s;
+  background: $white;
+}
+.card:hover {
+  box-shadow: 0 12px 36px rgba(33,150,243,0.18);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Navbar dan sidebar */
+.navbar, .sidebar {
+  background-color: $telkom-red;
+  color: $white;
+  box-shadow: $shadow;
+}
+
+.navbar a, .sidebar a {
+  color: $white;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar a:hover, .sidebar a:hover {
+  color: $primary-blue;
+}
+
+/* Header card */
+.card-header.bg-primary {
+  background-color: $telkom-red !important;
+  color: $white;
+}
+.card-header.bg-info {
+  background-color: $primary-blue !important;
+  color: $white;
+}
+
+/* Table hover */
+.table-hover tbody tr:hover {
+  background-color: $soft-blue;
+}
+
+/* Responsive padding */
+.container-fluid {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Custom scrollbar untuk sidebar */
+.sidebar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: $gray;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $soft-blue;
+    border-radius: 8px;
+  }
+}
